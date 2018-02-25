@@ -28,6 +28,32 @@ export class LogService {
   	this.logSource.next(log);
   }
 
+  addLog(log: Log){
+  	this.logs.unshift(log);
+  }
+
+  //this updates log
+  updateLog(log: Log) {
+  	this.logs.forEach((cur, index) => {
+  		//this will delete it 
+  		if(log.id === cur.id){
+  			this.logs.splice(index,1);
+  		}
+  	});
+  	//this will pass in the updated log
+  	this.logs.unshift(log);
+  }
+
+
+  //this deletes log 
+  deleteLog(log: Log) {
+  	this.logs.forEach((cur, index) => {
+  		//this will delete it 
+  		if(log.id === cur.id){
+  			this.logs.splice(index,1);
+  		}
+  	});
+  }
 
 
 }
