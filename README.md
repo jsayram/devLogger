@@ -3,12 +3,14 @@
 ---
 Jose Ramirez Developer Notes:
 ---
-A C.R.U.D app for development logging. App features local storage functionality that persist its data. <br>
+
+A C.R.U.D app for development logging. App features local storage functionality that persist its data.
 Learned about state, sharing data accross components, and organization of UI.
+
 ---
 * Installed components using `ng g c components/name` , name: navbar, log-form, logs <br>
 
-#### Tools & Assets:
+## Tools & Assets:
 
 * Chrome extension: <i><strong> Augury</strong></i> <br> 
 -(For debugging and visualizing angular applications at runtime) <br>
