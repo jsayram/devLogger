@@ -3,7 +3,7 @@
 ---
 Jose Ramirez Developer Notes:
 ---
-
+App Description:
 A C.R.U.D app for development logging. App features local storage functionality that persist its data.
 Learned about state, sharing data accross components, and organization of UI.
 
