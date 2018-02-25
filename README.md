@@ -8,7 +8,11 @@ A C.R.U.D app for development logging. App features local storage functionality 
 Learned about state, sharing data accross components, and organization of UI.
 
 ---
+
 * Installed components using `ng g c components/name` , name: navbar, log-form, logs <br>
+* Installed services using `ng g s services/log --module.app.module` <br>-These installations using the Angular CLI allows automatic addition to providers n the `app.module.ts` file <br>
+
+* Manually created a `models` directory with a `Logs.ts` file for an interface of the 'Log' , then import it to the `logs.components.ts` and `log.sevice.ts` files<br>
 
 ## Tools & Assets:
 
