@@ -14,6 +14,8 @@ Learned about state, sharing data accross components, and organization of UI.
 
 * Manually created a `models` directory with a `Logs.ts` file for an interface of the 'Log' , then import it to the `logs.components.ts` and `log.sevice.ts` files<br>
 
+Other notes: imported the `Observable` ,the `of` operator, and the `BehaviorSubject` from the `rxjs` library in the `log.services.ts` file <br>
+
 ## Tools & Assets:
 
 * Chrome extension: <i><strong> Augury</strong></i> <br> 
