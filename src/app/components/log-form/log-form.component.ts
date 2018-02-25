@@ -16,7 +16,7 @@ export class LogFormComponent implements OnInit {
   isNew: boolean = true;
 
   constructor(private logService: LogService) { 
-  }
+  } 
 
   ngOnInit() {
     //subcribe to the selectedLog observable
@@ -51,6 +51,17 @@ export class LogFormComponent implements OnInit {
   	   //update log
   	   this.logService.updateLog(updLog);
   	}
+   //Clear State 
+   this.clearState();
+  }
+
+  //clears the form and returns to default empty values
+  clearState(){
+  	  this.isNew = true;
+      this.id = '';
+      this.text = '';
+      this.date = '';
+      this.logService.clearState();
   }
 
  //gotten from stackOverFlow (https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript)

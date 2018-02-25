@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 import { Observable } from 'rxjs/Observable';
@@ -9,16 +9,21 @@ import { Log } from '../models/Log';
 @Injectable()
 export class LogService {
   logs: Log[];
+
   private logSource = new BehaviorSubject<Log>({id: null,text: null,date: null});
   selectedLog = this.logSource.asObservable();
 
-  constructor() { 
-   this.logs = [
-  	{ id: '1', text: 'Generated components', date: new Date('12/26/2917 12:44:23')},
-  	{ id: '2', text: 'Added Bootstrap', date: new Date('12/28/2917 9:33:23')},
-  	{ id: '3', text: 'Added logs component', date: new Date('12/27/2917 12:00:23')}
+  private stateSource = new BehaviorSubject<boolean>(true);
+  stateClear = this.stateSource.asObservable();
 
-  	]
+  constructor() { 
+   // this.logs = [
+  	// { id: '1', text: 'Generated components', date: new Date('12/26/2917 12:44:23')},
+  	// { id: '2', text: 'Added Bootstrap', date: new Date('12/28/2917 9:33:23')},
+  	// { id: '3', text: 'Added logs component', date: new Date('12/27/2917 12:00:23')}
+
+  	// ]
+    this.logs = [];
   }
   getLogs(): Observable<Log[]> {
   	return of(this.logs);
@@ -55,5 +60,10 @@ export class LogService {
   	});
   }
 
+  //clears the state
+  clearState(){
+    this.stateSource.next(true);
+  }
 
 }
+
